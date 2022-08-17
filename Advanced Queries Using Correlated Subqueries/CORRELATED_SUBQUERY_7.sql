@@ -4,15 +4,15 @@
 SELECT
 	d.department,
 	(
-		SELECT
-			MAX(salary)
-		FROM employees AS e
-		WHERE e.department = d.department
+	   SELECT
+		MAX(salary)
+	   FROM employees AS e
+	   WHERE e.department = d.department
 	) AS Highest_paid_salary
 FROM departments AS d
 WHERE 45 < (
-			SELECT
-				COUNT(m.employee_id)
-			FROM employees AS m
-			WHERE m.department = d.department
-			);
+	   SELECT
+		COUNT(m.employee_id)
+	   FROM employees AS m
+	   WHERE m.department = d.department
+	   );
