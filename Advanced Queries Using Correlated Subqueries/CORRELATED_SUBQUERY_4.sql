@@ -5,10 +5,10 @@ WITH CHINCHO AS
 SELECT
 	e.department,
 	(
-		SELECT
-			COUNT(m.employee_id) 
-		FROM employees AS m
-		WHERE e.department = m.department
+	SELECT
+		COUNT(m.employee_id) 
+	FROM employees AS m
+	WHERE e.department = m.department
 	) AS Emp_Number
 FROM employees AS e
 )
