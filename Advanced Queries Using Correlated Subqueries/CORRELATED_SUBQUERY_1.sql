@@ -1,8 +1,8 @@
 -- Query shoudl return employees who make salary more than their departmental avg salary
 
 SELECT
-	first_name,
-	salary
+      first_name,
+      salary
 FROM employees AS e
 WHERE salary > (
 		SELECT
