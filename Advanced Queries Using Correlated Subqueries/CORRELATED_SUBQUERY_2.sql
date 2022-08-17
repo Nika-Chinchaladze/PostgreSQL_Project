@@ -5,8 +5,8 @@ SELECT
 	salary
 FROM employees AS e
 WHERE salary > (
-				SELECT
-					ROUND(AVG(salary))
-				FROM employees AS m
-				WHERE e.region_id = m.region_id
-				);
+		SELECT
+			ROUND(AVG(salary))
+		FROM employees AS m
+		WHERE e.region_id = m.region_id
+		);
