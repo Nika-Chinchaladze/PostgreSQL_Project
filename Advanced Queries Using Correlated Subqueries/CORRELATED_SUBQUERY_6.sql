@@ -4,8 +4,8 @@ SELECT DISTINCT
 	m.department
 FROM employees AS m
 WHERE 38 < (
-			SELECT
-				COUNT(e.employee_id)
-			FROM employees AS e
-			WHERE e.department = m.department
-			);
+	   SELECT
+		COUNT(e.employee_id)
+	   FROM employees AS e
+	   WHERE e.department = m.department
+	   );
